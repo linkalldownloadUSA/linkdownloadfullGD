@@ -7,32 +7,63 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Nút chuyển chế độ -->
+  <button class="toggle-mode" onclick="toggleDarkMode()">🌙/☀️</button>
+
   <h1>Link tải Geometry Dash và Geode</h1>
 
   <h2>Geometry Dash</h2>
   <ul>
-    <li><a href="https://mobdisc.com/fdl/5bfc8e13-ef6d-4c57-845d-f2a91e222ec7/Geometry-Dash-v2-207.ipa" target="_blank">Tải Geometry Dash cho iOS</a></li>
-    <li><a href="https://d.apkcloud.net/geometry-dash-apk-v2.2.14.apk" target="_blank">Tải Geometry Dash cho Android</a></li>
-    <li><a href="https://itchio-mirror.cb031a832f44726753d6267436f3b414.r2.cloudflarestorage.com/upload2/game/3156463/12167793" target="_blank">Tải Geometry Dash cho Windows (Kèm Mods)</a></li>
+    <li>
+      <img src="icons/ios.png" class="icon" alt="iOS" />
+      <a href="https://mobdisc.com/fdl/..." onclick="notify('iOS')" target="_blank">Tải cho iOS</a>
+    </li>
+    <li>
+      <img src="icons/android.png" class="icon" alt="Android" />
+      <a href="https://d.apkcloud.net/..." onclick="notify('Android')" target="_blank">Tải cho Android</a>
+    </li>
+    <li>
+      <img src="icons/windows.png" class="icon" alt="Windows" />
+      <a href="https://itchio-mirror..." onclick="notify('Windows')" target="_blank">Tải cho Windows (Mods)</a>
+    </li>
   </ul>
 
   <h2>Geode (mod cho Geometry Dash)</h2>
-  <p>Geode là một mod (bản mod) dành cho trò chơi Geometry Dash, giúp bổ sung nhiều tính năng và cải tiến trải nghiệm chơi.</p>
+  <p>Geode là một bản mod giúp cải tiến trò chơi Geometry Dash.</p>
   <ul>
-    <li><a href="https://github.com/geode-sdk/ios-launcher/releases/tag/v1.3.0" target="_blank">Tải Geode cho iOS</a></li>
-    <li><a href="https://github.com/geode-sdk/android-launcher/releases/tag/1.6.1" target="_blank">Tải Geode cho Android</a></li>
-    <li><a href="https://github.com/geode-sdk/geode/releases/tag/v4.7.0" target="_blank">Tải Geode cho Windows / macOS / Linux</a></li>
+    <li>
+      <img src="icons/ios.png" class="icon" alt="iOS" />
+      <a href="https://github.com/..." onclick="notify('Geode iOS')" target="_blank">Tải Geode cho iOS</a>
+    </li>
+    <li>
+      <img src="icons/android.png" class="icon" alt="Android" />
+      <a href="https://github.com/..." onclick="notify('Geode Android')" target="_blank">Tải Geode cho Android</a>
+    </li>
+    <li>
+      <img src="icons/windows.png" class="icon" alt="Windows" />
+      <a href="https://github.com/..." onclick="notify('Geode PC')" target="_blank">Tải Geode cho Windows / macOS / Linux</a>
+    </li>
   </ul>
 
-  <h2>Globed (phần mềm hỗ trợ chạy mod cho Geometry Dash)</h2>
-  <p>Globed là một phần mềm hỗ trợ chơi cùng và tích hợp các mod cho Geometry Dash, giúp nâng cao trải nghiệm chơi game.</p>
+  <h2>Globed (chạy mod Geometry Dash)</h2>
   <ul>
-    <li><a href="https://github.com/GlobedGD/globed2/releases/tag/v1.8.5" target="_blank">Tải file Globed (file nén)</a></li>
+    <li>
+      <img src="icons/windows.png" class="icon" alt="Windows" />
+      <a href="https://github.com/..." onclick="notify('Globed')" target="_blank">Tải file Globed (nén)</a>
+    </li>
   </ul>
 
   <h2>Hướng dẫn tải Geode trên iOS</h2>
   <ul>
-    <li><a href="https://github.com/geode-sdk/ios-launcher/blob/main/INSTALL.md" target="_blank">Xem hướng dẫn tải Geode trên iOS</a></li>
+    <li>
+      <img src="icons/ios.png" class="icon" alt="iOS" />
+      <a href="https://github.com/..." onclick="notify('Hướng dẫn')" target="_blank">Xem hướng dẫn</a>
+    </li>
   </ul>
+
+  <button class="button" onclick="showPopup()">📌 Mẹo: Cài đặt Geode an toàn</button>
+
+  <!-- Gọi file JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
