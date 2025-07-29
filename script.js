@@ -1,14 +1,11 @@
-// Hiển thị thông báo khi người dùng bấm vào link tải
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function (e) {
-        const fileName = this.textContent.trim();
-        alert(`Bạn đang mở link tải: ${fileName}`);
-    });
-});
+function notify(platform) {
+  alert("👉 Bạn đang tải: " + platform);
+}
 
-// Hiệu ứng khi nhấn vào tiêu đề
-document.querySelectorAll('h2').forEach(heading => {
-    heading.addEventListener('click', () => {
-        heading.classList.toggle('active');
-    });
-});
+function showPopup() {
+  alert("💡 Luôn tải từ nguồn chính thức để bảo vệ thiết bị của bạn.");
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle("dark");
+}
