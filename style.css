@@ -1,40 +1,112 @@
-body {
-    font-family: "Segoe UI", sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    margin: 0;
-    padding: 0;
+:root {
+  --bg-color: #f0f4f8;
+  --text-color: #2c3e50;
+  --link-color: #2980b9;
+  --link-hover: #1f6391;
+  --section-color: #3498db;
 }
 
-.container {
-    max-width: 800px;
-    margin: 40px auto;
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+body.dark {
+  --bg-color: #1c1e22;
+  --text-color: #f5f5f5;
+  --link-color: #4aa3ff;
+  --link-hover: #79bfff;
+  --section-color: #4aa3ff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 h1 {
-    color: #005bbb;
-    margin-bottom: 30px;
+  color: var(--section-color);
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 h2 {
-    color: #007b83;
-    margin-top: 25px;
+  margin-top: 40px;
+  color: var(--text-color);
+  font-size: 1.6em;
+  border-left: 5px solid var(--section-color);
+  padding-left: 15px;
+  margin-bottom: 10px;
 }
 
 ul {
-    list-style-type: disc;
-    padding-left: 20px;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
 }
 
 a {
-    color: #1a73e8;
-    text-decoration: none;
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-    text-decoration: underline;
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.button {
+  background-color: var(--section-color);
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 1em;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.toggle-mode {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--section-color);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
 }
